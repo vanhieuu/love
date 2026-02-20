@@ -1,343 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To My Love 💕</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/main.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
     <div class="hearts-bg" id="heartsContainer"></div>
 
     <div class="container">
-        <header>
-            <h1>💕 To My One & Only 💕</h1>
-            <p class="subtitle">A journey through our love story</p>
-        </header>
+      <header>
+        <h1>💕 To My One & Only 💕</h1>
+        <p class="subtitle">A journey through our love story</p>
+      </header>
 
-        <!-- Countdown Timer -->
-        <div class="card">
-            <div class="card-content">
-                <h2>⏰ Our Time Together ⏰</h2>
-                <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Every moment with you is precious</p>
-                
-                <div class="countdown-container">
-                    <div class="countdown-box">
-                        <div class="countdown-number" id="days">0</div>
-                        <div class="countdown-label">Days Together</div>
-                    </div>
-                    <div class="countdown-box">
-                        <div class="countdown-number" id="hours">0</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-box">
-                        <div class="countdown-number" id="minutes">0</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-box">
-                        <div class="countdown-number" id="seconds">0</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
-                </div>
+      <!-- Countdown Timer -->
+      <div class="card">
+        <div class="card-content">
+          <h2>⏰ Our Time Together ⏰</h2>
+          <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem">
+            Every moment with you is precious
+          </p>
 
-                <div style="margin-top: 40px;">
-                    <h3 style="text-align: center; font-family: 'Caveat', cursive; font-size: 2rem; color: var(--terracotta); margin-bottom: 20px;">Upcoming Adventures</h3>
-                    <div class="milestone">
-                        <h3>🌹 Buổi hẹn sắp tới</h3>
-                        <p>Chúng ta còn 1 kèo đi ăn đồ nướng Lạng sơn trên phố này</p>
-                    </div>
-                    <div class="milestone">
-                        <h3>✈️ Chuyến đi mới</h3>
-                        <p>Anh đã mong là chúng ta sẽ đi được Mũi Né, vì homestay ở đó siêu đẹp</p>
-                    </div>
-                    <div class="milestone">
-                        <h3>💍 Forever & Always</h3>
-                        <p>Mỗi ngày bên em với anh đều là hạnh phúc</p>
-                    </div>
-                </div>
+          <div class="countdown-container">
+            <div class="countdown-box">
+              <div class="countdown-number" id="days">0</div>
+              <div class="countdown-label">Days Together</div>
             </div>
-        </div>
-
-        <!-- Photo Gallery -->
-        <div class="card">
-            <div class="card-content">
-                <h2>📸 Our Beautiful Moments 📸</h2>
-                <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Each photo tells our story</p>
-                
-                <div class="photo-gallery">
-                    <div class="photo-slide active">
-                        <img src="./assets/img/photo1.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
-                        <div class="photo-caption">"Chuyến đi chơi xa đầu tiên của 2 đứa mình"</div>
-                    </div>
-                    <div class="photo-slide">
-                        <img src="./assets/img/photo2.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
-                        <div class="photo-caption">"Đi date ở Hải Phòng này"</div>
-                    </div>
-                    <div class="photo-slide">
-                        <img src="./assets/img/photo3.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
-                        <div class="photo-caption">"Lần đầu anh lên nhà em chơi tết này"</div>
-                    </div>
-                    <div class="photo-slide">
-                        <img src="./assets/img/photo4.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
-                        <div class="photo-caption">"Vẫn là những chuyến đi chơi trên con xe cub 50cc của anh"</div>
-                    </div>
-                    <div class="photo-slide">
-                        <img src="./assets/img/photo5.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
-                        <div class="photo-caption">"The moment I realized I'm completely in love with you"</div>
-                    </div>
-                </div>
-
-                <div class="gallery-controls">
-                    <button class="gallery-btn" onclick="previousPhoto()">← Previous</button>
-                    <button class="gallery-btn" onclick="nextPhoto()">Next →</button>
-                    <div class="gallery-dots">
-                        <span class="dot active" onclick="goToPhoto(0)"></span>
-                        <span class="dot" onclick="goToPhoto(1)"></span>
-                        <span class="dot" onclick="goToPhoto(2)"></span>
-                        <span class="dot" onclick="goToPhoto(3)"></span>
-                        <span class="dot" onclick="goToPhoto(4)"></span>
-                    </div>
-                </div>
-
-               
+            <div class="countdown-box">
+              <div class="countdown-number" id="hours">0</div>
+              <div class="countdown-label">Hours</div>
             </div>
-        </div>
-
-        <!-- Music Player -->
-        <div class="card">
-            <div class="card-content">
-                <h2>🎵 Our Soundtrack 🎵</h2>
-                
-                <div class="music-player">
-                      <audio id="audioPlayer" preload="auto"></audio>
-
-    <div class="player-header">
-        <h3 id="currentSong">Yêu em qua dòng tin nhắn</h3>
-        <p class="now-playing">Là bài hát anh nghĩ về em mỗi khi nghe</p>
-    </div>
-                    
-                    <div class="player-controls">
-                        <button class="player-btn" onclick="previousSong()">⏮</button>
-                        <button class="player-btn" onclick="togglePlay()" id="playBtn">▶️</button>
-                        <button class="player-btn" onclick="nextSong()">⏭</button>
-                    </div>
-
-                    <div class="playlist">
-                        <div class="playlist-item active" onclick="selectSong(0)">
-                            <div class="song-title">Bên trái - Kiên Trịnh</div>
-                            <div class="song-memory">Bài hát đầu tiên mình nghe khi chúng ta biết mình cùng gu nhạc</div>
-                        </div>
-                        <div class="playlist-item" onclick="selectSong(1)">
-                            <div class="song-title">Vương - Ngơ</div>
-                            <div class="song-memory">Bài hát khi chúng ta cùng nghe dưới mưa</div>
-                        </div>
-                        <div class="playlist-item" onclick="selectSong(2)">
-                            <div class="song-title">Tình đắng như ly cà phê - nân & ngơ</div>
-                            <div class="song-memory">Nghe thì có vẻ đau khổ, nhưng khi đó là bài khi chúng ta nói yêu nhau</div>
-                        </div>
-                        <div class="playlist-item" onclick="selectSong(3)">
-                            <div class="song-title">🎵Yêu em qua dòng tin nhắn - Ngơ</div>
-                            <div class="song-memory">Là bài anh nghĩ về em mỗi khi nghe</div>
-                        </div>
-                        <div class="playlist-item" onclick="selectSong(4)">
-                            <div class="song-title">🎵 Make You Feel My Love - Adele</div>
-                            <div class="song-memory">The song that describes exactly how I feel about you</div>
-                        </div>
-                    </div>
-                </div>
-               
+            <div class="countdown-box">
+              <div class="countdown-number" id="minutes">0</div>
+              <div class="countdown-label">Minutes</div>
             </div>
-        </div>
-
-        <!-- Animated Timeline -->
-        <div class="card">
-            <div class="card-content">
-                <h2>📖 Our Love Story Timeline 📖</h2>
-                <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">The journey that brought us here</p>
-                
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-emoji">✨</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">15/08/2019</div>
-                            <h3 style="color: var(--terracotta); margin-bottom: 10px;">Lần đầu gặp mặt</h3>
-                            <p>Lần đầu chúng ta gặp mặt là ở trên phố đi bộ, lúc buổi tối này</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-emoji">💕</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">11/08/2020</div>
-                            <h3 style="color: var(--terracotta); margin-bottom: 10px;">First Date Magic</h3>
-                            <p>Buổi hẹn hò chính thức đầu tiên, nụ hôn đầu tiên ở CircleK Tôn Đức Thắng </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-emoji">❤️</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">14/02/2022</div>
-                            <h3 style="color: var(--terracotta); margin-bottom: 10px;">Mùa valentine xa nhau đầu tiên</h3>
-                            <p>Chúng ta từng phải xa nhau rất lâu do covid, nhưng rồi ta đã bù cho nhau bằng những kỷ niệm khác </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-emoji">🌹</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">11/08/2023</div>
-                            <h3 style="color: var(--terracotta); marÍgin-bottom: 10px;">Officially Ours</h3>
-                            <p>Anh biết rằng bọn mình không có khoảng thời gian mập mờ như em muốn, anh sẽ cố gắng để bù đắp cho em</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-emoji">💖</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">Hiện tại</div>
-                            <h3 style="color: var(--terracotta); margin-bottom: 10px;">Today & Forever</h3>
-                            <p>Still falling more in love with you every single day. Here's to our forever, my love.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="seconds">0</div>
+              <div class="countdown-label">Seconds</div>
             </div>
-        </div>
+          </div>
 
-        <!-- Treasure Hunt -->
-        <div class="card">
-            <div class="card-content">
-                <h2>🔐 Secret Treasure Hunt 🔐</h2>
-                <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Click each treasure to unlock hidden messages just for you!</p>
-                
-                <div class="treasure-grid">
-                    <div class="treasure-box" onclick="unlockTreasure(0)">
-                        <div class="treasure-icon">🎁</div>
-                        <div class="treasure-label"></div>
-                    </div>
-                    <div class="treasure-box" onclick="unlockTreasure(1)">
-                        <div class="treasure-icon">💎</div>
-                        <div class="treasure-label"></div>
-                    </div>
-                    <div class="treasure-box" onclick="unlockTreasure(2)">
-                        <div class="treasure-icon">🌟</div>
-                        <div class="treasure-label"></div>
-                    </div>
-                    <div class="treasure-box" onclick="unlockTreasure(3)">
-                        <div class="treasure-icon">🔮</div>
-                        <div class="treasure-label"></div>
-                    </div>
-                    <div class="treasure-box" onclick="unlockTreasure(4)">
-                        <div class="treasure-icon">🏆</div>
-                        <div class="treasure-label"></div>
-                    </div>
-                    <div class="treasure-box" onclick="unlockTreasure(5)">
-                        <div class="treasure-icon">👑</div>
-                        <div class="treasure-label"></div>
-                    </div>
-                </div>
+          <div style="margin-top: 40px">
+            <h3
+              style="
+                text-align: center;
+                font-family: &quot;Caveat&quot;, cursive;
+                font-size: 2rem;
+                color: var(--terracotta);
+                margin-bottom: 20px;
+              "
+            >
+              Upcoming Adventures
+            </h3>
+            <div class="milestone">
+              <h3>🌹 Buổi hẹn sắp tới</h3>
+              <p>Chúng ta còn 1 kèo đi ăn đồ nướng Lạng sơn trên phố này</p>
             </div>
-        </div>
-
-      
-       
-
-       
-
-        <!-- Memory Game -->
-        <div class="card">
-            <div class="card-content">
-                <h2>💑 Memory Match Game 💑</h2>
-                <p style="text-align: center; margin-bottom: 20px; font-size: 1.1rem;">Match the pairs of love!</p>
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <span style="font-size: 1.1rem; color: var(--deep-rose);">Moves: <strong id="moves">0</strong> | Matches: <strong id="matches">0/8</strong></span>
-                </div>
-                <div class="memory-grid" id="memoryGrid"></div>
-                <button onclick="resetMemoryGame()">Lại nào!</button>
+            <div class="milestone">
+              <h3>✈️ Chuyến đi mới</h3>
+              <p>
+                Anh đã mong là chúng ta sẽ đi được Mũi Né, vì homestay ở đó siêu
+                đẹp
+              </p>
             </div>
-        </div>
-
-        <!-- Love Coupons -->
-        <div class="card">
-            <div class="card-content">
-                <h2>💝 Love Coupons 💝</h2>
-                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">Click to reveal your special surprises!</p>
-                <div class="coupons-grid">
-                    <div class="coupon" onclick="scratchCoupon(this)">
-                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
-                        <div class="coupon-content">
-                            <strong>Free Hug</strong>
-                            Valid anytime, anywhere! Redeemable unlimited times ❤️
-                        </div>
-                    </div>
-                    <div class="coupon" onclick="scratchCoupon(this)">
-                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
-                        <div class="coupon-content">
-                            <strong>Night Date</strong>
-                            Em có thể chọn phim, loại đồ ăn, hoặc bất kì điều gì em muốn mình cùng làm trong tối đó
-                        </div>
-                    </div>
-                    <div class="coupon" onclick="scratchCoupon(this)">
-                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
-                        <div class="coupon-content">
-                            <strong>Phiếu tha thứ</strong>
-                            A sẽ tha thứ cho em về 1 điều bất kì
-                        </div>
-                    </div>
-                    <div class="coupon" onclick="scratchCoupon(this)">
-                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
-                        <div class="coupon-content">
-                            <strong>Free Kiss</strong>
-                             Valid anytime, anywhere! Redeemable unlimited times ❤️
-                        </div>
-                    </div>
-                    <div class="coupon" onclick="scratchCoupon(this)">
-                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
-                        <div class="coupon-content">
-                            <strong>Phiếu Massage</strong>
-                            Em chỉ cần nằm xuống, việc giúp em thoải mái là việc của anh 💆
-                        </div>
-                    </div>
-                    <div class="coupon" onclick="scratchCoupon(this)">
-                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
-                        <div class="coupon-content">
-                            <strong>Phiếu rửa bát</strong>
-                            Anh sẽ rửa bát cho em trong 1 tuần 🧽
-                        </div>
-                    </div>
-                </div>
+            <div class="milestone">
+              <h3>💍 Forever & Always</h3>
+              <p>Mỗi ngày bên em với anh đều là hạnh phúc</p>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Love Letter -->
-        <div class="card">
-            <div class="card-content">
-                <h2>💌 Final Words From My Heart 💌</h2>
-                <div class="love-letter">
-                    <p>My Dearest Love,</p>
-                    <p>Anh làm trang web này không phải vì anh giỏi mấy thứ này, mà vì khi ngồi làm, anh nhớ lại từng chuyện của hai đứa mình. Từ những lần đi chơi xa, những buổi hẹn hò rất bình thường, đến cả những lúc chỉ ngồi cạnh nhau chẳng làm gì… nhưng lại thấy rất vui.</p>
-                    <p>Anh nhận ra điều anh thích nhất không phải là đi đâu, ăn gì hay làm gì, mà là chỉ cần có em ở bên.</p>
-                    <p>Em làm cuộc sống của anh thay đổi nhiều hơn em nghĩ. Một ngày bình thường của anh cũng trở nên khác đi chỉ vì có tin nhắn của em. Tiếng cười của em là thứ anh luôn muốn nghe, và ở cạnh em là lúc anh thấy thoải mái nhất.</p>
-                    <p>Cảm ơn em vì đã ở đây với anh, vì đã kiên nhẫn với anh, và vì đã chọn anh giữa rất nhiều điều khác. Anh không hứa anh sẽ hoàn hảo, nhưng anh hứa anh sẽ luôn cố gắng vì em, và sẽ luôn ở phía em.</p>
-                    <p>Anh vẫn muốn sau này, khi nhớ lại khoảng thời gian này, tụi mình có thể mỉm cười và nói:
-“Ừ, may mà ngày đó mình đã chọn nhau.”</p>
-<p>Anh yêu em. 💕</p>
-                    <div class="signature">Forever & Always Yours,<br/>TVH ✨</div>
-                </div>
+      <!-- Photo Gallery -->
+      <div class="card">
+        <div class="card-content">
+          <h2>📸 Our Beautiful Moments 📸</h2>
+          <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem">
+            Each photo tells our story
+          </p>
+
+          <div class="photo-gallery">
+            <div class="photo-slide active">
+              <img
+                src="./assets/img/photo1.png"
+                style="
+                  width: 100%;
+                  height: 400px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+                alt="Our Photo"
+              />
+              <div class="photo-caption">
+                "Chuyến đi chơi xa đầu tiên của 2 đứa mình"
+              </div>
             </div>
+            <div class="photo-slide">
+              <img
+                src="./assets/img/photo2.png"
+                style="
+                  width: 100%;
+                  height: 400px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+                alt="Our Photo"
+              />
+              <div class="photo-caption">"Đi date ở Hải Phòng này"</div>
+            </div>
+            <div class="photo-slide">
+              <img
+                src="./assets/img/photo3.png"
+                style="
+                  width: 100%;
+                  height: 400px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+                alt="Our Photo"
+              />
+              <div class="photo-caption">
+                "Lần đầu anh lên nhà em chơi tết này"
+              </div>
+            </div>
+            <div class="photo-slide">
+              <img
+                src="./assets/img/photo4.png"
+                style="
+                  width: 100%;
+                  height: 400px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+                alt="Our Photo"
+              />
+              <div class="photo-caption">
+                "Vẫn là những chuyến đi chơi trên con xe cub 50cc của anh"
+              </div>
+            </div>
+            <div class="photo-slide">
+              <img
+                src="./assets/img/photo5.png"
+                style="
+                  width: 100%;
+                  height: 400px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+                alt="Our Photo"
+              />
+              <div class="photo-caption">
+                "The moment I realized I'm completely in love with you"
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-controls">
+            <button class="gallery-btn" onclick="previousPhoto()">
+              ← Previous
+            </button>
+            <button class="gallery-btn" onclick="nextPhoto()">Next →</button>
+            <div class="gallery-dots">
+              <span class="dot active" onclick="goToPhoto(0)"></span>
+              <span class="dot" onclick="goToPhoto(1)"></span>
+              <span class="dot" onclick="goToPhoto(2)"></span>
+              <span class="dot" onclick="goToPhoto(3)"></span>
+              <span class="dot" onclick="goToPhoto(4)"></span>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Music Player -->
+      <div class="card">
+        <div class="card-content">
+          <h2>🎵 Our Soundtrack 🎵</h2>
+
+          <div class="music-player">
+            <audio id="audioPlayer" preload="auto"></audio>
+
+            <div class="player-header">
+              <h3 id="currentSong">Yêu em qua dòng tin nhắn</h3>
+              <p class="now-playing">Là bài hát anh nghĩ về em mỗi khi nghe</p>
+            </div>
+
+            <div class="player-controls">
+              <button class="player-btn" onclick="previousSong()">⏮</button>
+              <button class="player-btn" onclick="togglePlay()" id="playBtn">
+                ▶️
+              </button>
+              <button class="player-btn" onclick="nextSong()">⏭</button>
+            </div>
+
+            <div class="playlist">
+              <div class="playlist-item active" onclick="selectSong(0)">
+                <div class="song-title">Bên trái - Kiên Trịnh</div>
+                <div class="song-memory">
+                  Bài hát đầu tiên mình nghe khi chúng ta biết mình cùng gu nhạc
+                </div>
+              </div>
+              <div class="playlist-item" onclick="selectSong(1)">
+                <div class="song-title">Vương - Ngơ</div>
+                <div class="song-memory">
+                  Bài hát khi chúng ta cùng nghe dưới mưa
+                </div>
+              </div>
+              <div class="playlist-item" onclick="selectSong(2)">
+                <div class="song-title">
+                  Tình đắng như ly cà phê - nân & ngơ
+                </div>
+                <div class="song-memory">
+                  Nghe thì có vẻ đau khổ, nhưng khi đó là bài khi chúng ta nói
+                  yêu nhau
+                </div>
+              </div>
+              <div class="playlist-item" onclick="selectSong(3)">
+                <div class="song-title">🎵Yêu em qua dòng tin nhắn - Ngơ</div>
+                <div class="song-memory">
+                  Là bài anh nghĩ về em mỗi khi nghe
+                </div>
+              </div>
+              <div class="playlist-item" onclick="selectSong(4)">
+                <div class="song-title">🎵 Make You Feel My Love - Adele</div>
+                <div class="song-memory">
+                  The song that describes exactly how I feel about you
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Timeline -->
+      <div class="card">
+        <div class="card-content">
+          <h2>📖 Our Love Story Timeline 📖</h2>
+          <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem">
+            The journey that brought us here
+          </p>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-emoji">✨</div>
+              <div class="timeline-content">
+                <div class="timeline-date">15/08/2019</div>
+                <h3 style="color: var(--terracotta); margin-bottom: 10px">
+                  Lần đầu gặp mặt
+                </h3>
+                <p>
+                  Lần đầu chúng ta gặp mặt là ở trên phố đi bộ, lúc buổi tối này
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-emoji">💕</div>
+              <div class="timeline-content">
+                <div class="timeline-date">11/08/2020</div>
+                <h3 style="color: var(--terracotta); margin-bottom: 10px">
+                  First Date Magic
+                </h3>
+                <p>
+                  Buổi hẹn hò chính thức đầu tiên, nụ hôn đầu tiên ở CircleK Tôn
+                  Đức Thắng
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-emoji">❤️</div>
+              <div class="timeline-content">
+                <div class="timeline-date">14/02/2022</div>
+                <h3 style="color: var(--terracotta); margin-bottom: 10px">
+                  Mùa valentine xa nhau đầu tiên
+                </h3>
+                <p>
+                  Chúng ta từng phải xa nhau rất lâu do covid, nhưng rồi ta đã
+                  bù cho nhau bằng những kỷ niệm khác
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-emoji">🌹</div>
+              <div class="timeline-content">
+                <div class="timeline-date">11/08/2023</div>
+                <h3 style="color: var(--terracotta); marígin-bottom: 10px">
+                  Officially Ours
+                </h3>
+                <p>
+                  Anh biết rằng bọn mình không có khoảng thời gian mập mờ như em
+                  muốn, anh sẽ cố gắng để bù đắp cho em
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-emoji">💖</div>
+              <div class="timeline-content">
+                <div class="timeline-date">Hiện tại</div>
+                <h3 style="color: var(--terracotta); margin-bottom: 10px">
+                  Today & Forever
+                </h3>
+                <p>
+                  Still falling more in love with you every single day. Here's
+                  to our forever, my love.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Treasure Hunt -->
+      <div class="card">
+        <div class="card-content">
+          <h2>🔐 Secret Treasure Hunt 🔐</h2>
+          <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem">
+            Click each treasure to unlock hidden messages just for you!
+          </p>
+
+          <div class="treasure-grid">
+            <div class="treasure-box" onclick="unlockTreasure(0)">
+              <div class="treasure-icon">🎁</div>
+              <div class="treasure-label"></div>
+            </div>
+            <div class="treasure-box" onclick="unlockTreasure(1)">
+              <div class="treasure-icon">💎</div>
+              <div class="treasure-label"></div>
+            </div>
+            <div class="treasure-box" onclick="unlockTreasure(2)">
+              <div class="treasure-icon">🌟</div>
+              <div class="treasure-label"></div>
+            </div>
+            <div class="treasure-box" onclick="unlockTreasure(3)">
+              <div class="treasure-icon">🔮</div>
+              <div class="treasure-label"></div>
+            </div>
+            <div class="treasure-box" onclick="unlockTreasure(4)">
+              <div class="treasure-icon">🏆</div>
+              <div class="treasure-label"></div>
+            </div>
+            <div class="treasure-box" onclick="unlockTreasure(5)">
+              <div class="treasure-icon">👑</div>
+              <div class="treasure-label"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Memory Game -->
+      <div class="card">
+        <div class="card-content">
+          <h2>💑 Memory Match Game 💑</h2>
+          <p style="text-align: center; margin-bottom: 20px; font-size: 1.1rem">
+            Match the pairs of love!
+          </p>
+          <div style="text-align: center; margin-bottom: 20px">
+            <span style="font-size: 1.1rem; color: var(--deep-rose)"
+              >Moves: <strong id="moves">0</strong> | Matches:
+              <strong id="matches">0/8</strong></span
+            >
+          </div>
+          <div class="memory-grid" id="memoryGrid"></div>
+          <button onclick="resetMemoryGame()">Lại nào!</button>
+        </div>
+      </div>
+
+      <!-- Love Coupons -->
+      <div class="card">
+        <div class="card-content">
+          <h2>💝 Love Coupons 💝</h2>
+          <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem">
+            Click to reveal your special surprises!
+          </p>
+          <div class="coupons-grid">
+            <div class="coupon" onclick="scratchCoupon(this)">
+              <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+              <div class="coupon-content">
+                <strong>Free Hug</strong>
+                Valid anytime, anywhere! Redeemable unlimited times ❤️
+              </div>
+            </div>
+            <div class="coupon" onclick="scratchCoupon(this)">
+              <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+              <div class="coupon-content">
+                <strong>Night Date</strong>
+                Em có thể chọn phim, loại đồ ăn, hoặc bất kì điều gì em muốn
+                mình cùng làm trong tối đó
+              </div>
+            </div>
+            <div class="coupon" onclick="scratchCoupon(this)">
+              <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+              <div class="coupon-content">
+                <strong>Phiếu tha thứ</strong>
+                A sẽ tha thứ cho em về 1 điều bất kì
+              </div>
+            </div>
+            <div class="coupon" onclick="scratchCoupon(this)">
+              <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+              <div class="coupon-content">
+                <strong>Free Kiss</strong>
+                Valid anytime, anywhere! Redeemable unlimited times ❤️
+              </div>
+            </div>
+            <div class="coupon" onclick="scratchCoupon(this)">
+              <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+              <div class="coupon-content">
+                <strong>Phiếu Massage</strong>
+                Em chỉ cần nằm xuống, việc giúp em thoải mái là việc của anh 💆
+              </div>
+            </div>
+            <div class="coupon" onclick="scratchCoupon(this)">
+              <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+              <div class="coupon-content">
+                <strong>Phiếu rửa bát</strong>
+                Anh sẽ rửa bát cho em trong 1 tuần 🧽
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Love Letter -->
+      <div class="card">
+        <div class="card-content">
+          <h2>💌 Final Words From My Heart 💌</h2>
+          <div class="love-letter">
+            <p>My Dearest Love,</p>
+            <p>
+              Anh làm trang web này không phải vì anh giỏi mấy thứ này, mà vì
+              khi ngồi làm, anh nhớ lại từng chuyện của hai đứa mình. Từ những
+              lần đi chơi xa, những buổi hẹn hò rất bình thường, đến cả những
+              lúc chỉ ngồi cạnh nhau chẳng làm gì… nhưng lại thấy rất vui.
+            </p>
+            <p>
+              Anh nhận ra điều anh thích nhất không phải là đi đâu, ăn gì hay
+              làm gì, mà là chỉ cần có em ở bên.
+            </p>
+            <p>
+              Em làm cuộc sống của anh thay đổi nhiều hơn em nghĩ. Một ngày bình
+              thường của anh cũng trở nên khác đi chỉ vì có tin nhắn của em.
+              Tiếng cười của em là thứ anh luôn muốn nghe, và ở cạnh em là lúc
+              anh thấy thoải mái nhất.
+            </p>
+            <p>
+              Cảm ơn em vì đã ở đây với anh, vì đã kiên nhẫn với anh, và vì đã
+              chọn anh giữa rất nhiều điều khác. Anh không hứa anh sẽ hoàn hảo,
+              nhưng anh hứa anh sẽ luôn cố gắng vì em, và sẽ luôn ở phía em.
+            </p>
+            <p>
+              Anh vẫn muốn sau này, khi nhớ lại khoảng thời gian này, tụi mình
+              có thể mỉm cười và nói: “Ừ, may mà ngày đó mình đã chọn nhau.”
+            </p>
+            <p>Anh yêu em. 💕</p>
+            <div class="signature">Forever & Always Yours,<br />TVH ✨</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Modal for treasure messages -->
     <div class="modal" id="treasureModal">
-        <div class="modal-content">
-            <div class="modal-emoji" id="modalEmoji"></div>
-            <div class="modal-message" id="modalMessage"></div>
-            <button class="modal-close" onclick="closeModal()">Close ❤️</button>
-        </div>
+      <div class="modal-content">
+        <div class="modal-emoji" id="modalEmoji"></div>
+        <div class="modal-message" id="modalMessage"></div>
+        <button class="modal-close" onclick="closeModal()">Close ❤️</button>
+      </div>
     </div>
 
     <script src="./assets/js/main.js"></script>
-</body>
+  </body>
 </html>
