@@ -78,7 +78,7 @@ setInterval(nextPhoto, 5000);
 const songs = [
     { src: "assets/audio/bentrai.mp3", title: "Bên trái", memory: "Anh là bên trái, because u always right" },
     { src: "assets/audio/vuong.mp3", title: "Vương", memory: "Hehe" },
-    { src: "assets/audio/vuong.mp3", title: "Tình đắng như ly cà phê", memory: "Nghe giống kỷ niệm của chúng ta" },
+    { src: "assets/audio/tdnlcf.mp3", title: "Tình đắng như ly cà phê", memory: "Nghe giống kỷ niệm của chúng ta" },
     { src: "assets/audio/yeqdtn.mp3", title: "Yêu em qua dòng tin nhắn", memory: "Nghĩ về nhau mỗi khi nghe bài này" },
     { src: "assets/audio/mmfml.mp3", title: "Make me feel my love", memory: "My heart beats differently with this ❤️" }
 
@@ -218,11 +218,11 @@ function checkQuiz() {
     scoreDisplay.textContent = `${score} / ${questions.length}`;
     
     if (score === questions.length) {
-        resultMessage.innerHTML = "🎉 PERFECT SCORE! You know me so well! You're absolutely amazing! 💕";
+        resultMessage.innerHTML = "🎉 PERFECT SCORE! Ái chà chà, ghê đó :)))) 💕";
     } else if (score >= questions.length * 0.7) {
-        resultMessage.innerHTML = "❤️ Great job! You really pay attention! I love that about you! 😊";
+        resultMessage.innerHTML = "❤️ Không hoàn hảo cũng không sao cả, em đã để tâm rùi, a vẫn tự hào về em 😊";
     } else {
-        resultMessage.innerHTML = "💖 We have so much more to learn about each other! That's exciting! 🥰";
+        resultMessage.innerHTML = "💖 Quào, chúng ta còn nhiều điều về nhau để khám phá, anh khá là mong chờ đó 🥰";
     }
     
     resultDiv.classList.add('show');
